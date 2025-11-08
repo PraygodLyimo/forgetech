@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WHATSAPP_NUMBER = '+255657530700';
 
-export default function GetQuotePage() {
+function QuoteForm() {
   const searchParams = useSearchParams();
   const initialItem = (searchParams.get('item') || '').trim();
   const initialType = (searchParams.get('type') || '').trim() || '';
@@ -139,5 +139,13 @@ export default function GetQuotePage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function GetQuotePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <QuoteForm />
+    </Suspense>
   );
 }
