@@ -21,9 +21,9 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-[#373e51] mb-8">Who We Are:</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              ForgeTech is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions — ranging from small business networks to enterprise-grade server infrastructure and integrated security systems.</p>
+              ForgeTech is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions, ranging from small business networks to enterprise-grade server infrastructure and integrated security systems.</p>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              We prioritise uptime, security and clear documentation so your operations keep running. Our approach combines local knowledge with international standards to provide solutions that work for East African businesses.
+              We prioritize uptime, security, and clear documentation to ensure your operations run seamlessly. By combining deep local expertise with internationally recognized standards, ForgeTech provides practical, high-performance solutions tailored to the needs of East African businesses.
             </p>
           </div>
         </div>
