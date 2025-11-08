@@ -33,7 +33,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#373e51]">Phone</h4>
-                      <p className="text-gray-600">+255 XXX XXX XXX</p>
+                      <p className="text-gray-600">+255 784 142 152</p>
                     </div>
                   </div>
                   
@@ -45,7 +45,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#373e51]">Email</h4>
-                      <p className="text-gray-600">info@forgetech.co.tz</p>
+                      <p className="text-gray-600">info@forgetechtz.com</p>
                     </div>
                   </div>
                 </div>
