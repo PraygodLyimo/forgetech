@@ -128,7 +128,7 @@ export default function ServicesPage() {
                 <div className="text-3xl">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">24/7 Support</h3>
-                  <p className="text-gray-600">Managed services with round-the-clock monitoring available.</p>
+                  <p className="text-gray-600">Managed services with round the clock monitoring available.</p>
                 </div>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
             href="/contact"
             className="inline-block bg-white text-[#ff6219] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            Contact Us Today
+            Contact Us
           </a>
         </div>
       </section>
