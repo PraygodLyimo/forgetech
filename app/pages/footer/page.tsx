@@ -44,8 +44,8 @@ export default function Footer() {
               <h3 className="font-bold text-lg mb-4">Contact Info</h3>
               <ul className="space-y-2 text-gray-300">
                 <li>Arusha, Tanzania</li>
-                <li>+255 XXX XXX XXX</li>
-                <li>info@forgetech.co.tz</li>
+                <li>+255 784 142 152</li>
+                <li>info@forgetechtz.com</li>
               </ul>
             </div>
           </div>
