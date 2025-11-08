@@ -81,7 +81,7 @@ export default function AboutPage() {
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">Local Presence with Fast Support</h3>
-                  <p className="text-gray-600">Based in Arusha with quick on-site response times for urgent issues.</p>
+                  <p className="text-gray-600">Headquartered in Arusha, we provide swift on-site response for urgent and time-sensitive issues, ensuring minimal operational disruption.</p>
                 </div>
               </div>
 
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">Certified Vendors & Warranties</h3>
-                  <p className="text-gray-600">We work with certified vendors and provide comprehensive warranties on all installations.</p>
+                  <p className="text-gray-600">We partner with certified vendors and deliver robust warranties on all installations for peace of mind and reliability.</p>
                 </div>
               </div>
 
@@ -97,15 +97,15 @@ export default function AboutPage() {
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">End-to-End Project Management</h3>
-                  <p className="text-gray-600">From planning to deployment to ongoing maintenance, we handle it all.</p>
+                  <p className="text-gray-600">From planning and deployment to ongoing maintenance, we manage every stage of your ICT projects with precision and care.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#373e51] mb-2">Transparent Pricing & SLAs</h3>
-                  <p className="text-gray-600">Clear pricing structure and Service Level Agreements so you know what to expect.</p>
+                  <h3 className="text-xl font-semibold text-[#373e51] mb-2">Transparent Pricing</h3>
+                  <p className="text-gray-600">Our clear pricing structure and well-defined SLAs ensure you know exactly what to expect, avoiding surprises and delays.</p>
                 </div>
               </div>
 
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">International Standards</h3>
-                  <p className="text-gray-600">We follow industry best practices and international standards while understanding local needs.</p>
+                  <p className="text-gray-600">We implement solutions in line with global best practices while tailoring them to the specific needs of East African businesses.</p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how ForgeTech can help transform your ICT infrastructure.
+            Discover how ForgeTech can transform your ICT infrastructure with reliable, scalable, and tailored solutions. Get in touch today to discuss your project and explore how we can support your business.
           </p>
           <a
             href="/contact"
