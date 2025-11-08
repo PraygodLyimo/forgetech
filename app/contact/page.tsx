@@ -251,7 +251,7 @@ export default function ContactPage() {
             ></iframe>
           </div>
 
-          <p className="text-center text-sm text-gray-500 mt-4">📍 Arusha, Tanzania — Coordinates: -3.371291966395252, 36.69467616329542</p>
+          
         </div>
       </section>
     </div>
