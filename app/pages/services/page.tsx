@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <div className="mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4 text-[#373e51]">Our Services</h2>
         <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-          We offer a full spectrum of ICT services tailored to your organisation's needs.
+          We provide a comprehensive range of ICT solutions, tailored to meet the unique needs of your organization and ensure optimal performance, security, and scalability.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

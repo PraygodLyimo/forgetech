@@ -4,38 +4,38 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'ICT Consultancy & Support',
-      description: 'Infrastructure planning, managed support, documentation and SLA-based maintenance.',
-      features: ['Infrastructure audits', 'System design', 'Best practices consulting', 'SLA management'],
+      description: 'We provide expert guidance and managed support for your ICT infrastructure, including planning, documentation, and SLA-based maintenance to ensure optimal performance and reliability.',
+      features: ['Comprehensive infrastructure audits', 'Customized system design and architecture', 'Best practices and process consulting', 'Service Level Agreement (SLA) management'],
       icon: '🔧'
     },
     {
       title: 'Networking Solutions',
-      description: 'Structured cabling, fiber, network design, switching and WiFi optimisation.',
-      features: ['Structured cabling', 'Fiber optics', 'Network design', 'WiFi optimization'],
+      description: 'We design, implement, and optimize reliable network infrastructures tailored to your organization’s needs, covering everything from structured cabling to high-performance WiFi.',
+      features: ['Structured cabling systems', 'Fiber optic installations', 'Custom network design', 'WiFi performance optimization'],
       icon: '🌐'
     },
     {
       title: 'Security & Surveillance',
-      description: 'CCTV installations, NVR systems, access control and alarm systems.',
-      features: ['CCTV systems', 'NVR/DVR setup', 'Access control', 'Alarm systems'],
+      description: 'We provide comprehensive security solutions, including CCTV, access control, alarm systems, and NVR setups, to safeguard your business and ensure peace of mind.',
+      features: ['CCTV system installation and monitoring', 'Access control systems', 'Alarm system integration', 'Network Video Recorder (NVR) configuration'],
       icon: '🔒'
     },
     {
       title: 'Power & Backup',
-      description: 'UPS, battery banks and generator integration for high-availability sites.',
-      features: ['UPS systems', 'Battery banks', 'Generator setup', 'Power monitoring'],
+      description: 'We provide reliable power solutions to ensure continuous operation, including UPS systems, battery banks, and generator integration for high-availability sites.',
+      features: ['UPS systems', 'Battery banks installations', 'Generator setup', 'Power monitoring and management'],
       icon: '⚡'
     },
     {
       title: 'Cloud & Servers',
-      description: 'Server room design, virtualization, cloud migration and managed hosting.',
-      features: ['Server room design', 'Virtualization', 'Cloud migration', 'Managed hosting'],
+      description: 'We deliver end-to-end server and cloud solutions, including server room design, virtualization, cloud migration, and managed hosting, to ensure scalable and secure IT infrastructure.',
+      features: ['Server room palnning and design', 'Virtualization solutions', 'Cloud migration services', 'Managed hosting and support'],
       icon: '☁️'
     },
     {
       title: 'Business Communication',
-      description: 'IP telephony, PBX, video conferencing and unified communications.',
-      features: ['IP telephony', 'PBX systems', 'Video conferencing', 'Unified messaging'],
+      description: 'Comprehensive business communication solutions, including IP telephony, PBX systems, video conferencing, and unified messaging, to enhance collaboration and connectivity across your organization.',
+      features: ['IP telephony solutions', 'PBX systems installation and management', 'Video conferencing setup', 'Unified messaging'],
       icon: '📞'
     },
   ];
@@ -48,7 +48,7 @@ export default function ServicesPage() {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-5xl font-bold text-[#373e51] mb-6">Our Services</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We offer a full spectrum of ICT services tailored to your organisation's needs.
+              We provide expert guidance and managed support for your ICT infrastructure, including planning, documentation, and SLA-based maintenance to ensure optimal performance and reliability.
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss which service is right for your organization.
+            Let’s explore the right ICT solutions for your organization and how ForgeTech can help optimize your operations.
           </p>
           <a
             href="/contact"
