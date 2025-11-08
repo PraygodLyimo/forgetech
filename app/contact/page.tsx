@@ -85,7 +85,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#373e51] mb-2">Phone</h3>
-                    <p className="text-gray-600">+255 XXX XXX XXX</p>
+                    <p className="text-gray-600">+255 784 142 152</p>
                     <p className="text-sm text-gray-500 mt-1">Available Monday - Friday, 8am - 5pm</p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#373e51] mb-2">Email</h3>
-                    <p className="text-gray-600">info@forgetech.co.tz</p>
+                    <p className="text-gray-600">info@forgetech.com</p>
                     <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -234,18 +234,24 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section (placeholder) */}
+      {/* Map Section */}
       <section className="py-20 bg-orange-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#373e51] mb-8 text-center">Our Location</h2>
           <div className="max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg h-96">
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-gray-500 text-lg">📍 Arusha, Tanzania</p>
-                <p className="text-gray-400 mt-2">Map integration coming soon</p>
-              </div>
-            </div>
+            {/* Embedded map centered on provided coordinates */}
+            <iframe
+              title="Forgetech - Arusha Location"
+              src="https://www.google.com/maps?q=-3.371291966395252,36.69467616329542&z=15&output=embed"
+              width="100%"
+              height="100%"
+              className="border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
+
+          <p className="text-center text-sm text-gray-500 mt-4">📍 Arusha, Tanzania — Coordinates: -3.371291966395252, 36.69467616329542</p>
         </div>
       </section>
     </div>

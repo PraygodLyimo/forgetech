@@ -7,9 +7,9 @@ export default function AboutPage() {
       <section className="bg-linear-to-b from-[#fff9f5] to-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h1 className="text-5xl font-bold text-[#373e51] mb-6">About ForgeTech</h1>
+            <h1 className="text-5xl font-bold text-[#373e51] mb-6">ForgeTech</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Leading ICT solutions provider in East Africa, delivering reliable technology infrastructure and support since our founding.
+              Is the leading ICT solutions provider in East Africa, delivering reliable technology infrastructure and support since our founding.
             </p>
           </div>
         </div>
@@ -19,10 +19,9 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-[#373e51] mb-8">Who We Are</h2>
+            <h2 className="text-4xl font-bold text-[#373e51] mb-8">Who We Are:</h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              ForgeTech is a leading ICT company based in Arusha, Tanzania. Our team of certified engineers and technicians delivers reliable, scalable and maintainable solutions — from small business networks to enterprise-grade server rooms and security systems.
-            </p>
+              ForgeTech is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions — ranging from small business networks to enterprise-grade server infrastructure and integrated security systems.
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
               We prioritise uptime, security and clear documentation so your operations keep running. Our approach combines local knowledge with international standards to provide solutions that work for East African businesses.
             </p>
