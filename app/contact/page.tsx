@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,14 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  // animation state for map entrance
+  const [mapVisible, setMapVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setMapVisible(true), 150);
+    return () => clearTimeout(t);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -238,20 +246,26 @@ export default function ContactPage() {
       <section className="py-20 bg-orange-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#373e51] mb-8 text-center">Our Location</h2>
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg h-96">
+          <div
+            className={`max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg h-96 transform transition-all duration-700 ${
+              mapVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
+          >
             {/* Embedded map centered on provided coordinates */}
             <iframe
               title="Forgetech - Arusha Location"
               src="https://www.google.com/maps?q=-3.371291966395252,36.69467616329542&z=15&output=embed"
               width="100%"
               height="100%"
-              className="border-0"
+              className="border-0 w-full h-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
 
-          
+          <p className={`text-center text-sm text-gray-500 mt-4 transition-opacity duration-700 ${mapVisible ? 'opacity-100' : 'opacity-0'}`}>
+            📍 Arusha, Tanzania — Coordinates: -3.371291966395252, 36.69467616329542
+          </p>
         </div>
       </section>
     </div>
