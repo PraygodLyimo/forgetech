@@ -1,10 +1,18 @@
-'use client';
+ 'use client';
+
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 120);
+    return () => clearTimeout(t);
+  }, []);
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-linear-to-b from-[#fff9f5] to-white py-20">
+  {/* Hero Section */}
+  <section className={`bg-linear-to-b from-[#fff9f5] to-white py-20 transform transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-5xl font-bold text-[#373e51] mb-6">ForgeTech</h1>
@@ -15,8 +23,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section className="py-20 bg-white">
+  {/* Company Overview */}
+  <section className={`py-20 bg-white transform transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-[#373e51] mb-8">Who We Are:</h2>
@@ -29,37 +37,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="py-20 bg-gray-50">
+  {/* Our Values */}
+  <section className={`py-20 bg-gray-50 transform transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-[#373e51] mb-12 text-center">Our Core Values</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-700" style={{ transitionDelay: visible ? '120ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-12 h-12 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] rounded-lg mb-4"></div>
                 <h3 className="text-2xl font-bold text-[#373e51] mb-4">Reliability</h3>
                 <p className="text-gray-600 leading-relaxed">
                   We build systems that stay up. Our solutions are designed for uptime, with redundancy and failover built in from the start.
                 </p>
               </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-700" style={{ transitionDelay: visible ? '200ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-12 h-12 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] rounded-lg mb-4"></div>
                 <h3 className="text-2xl font-bold text-[#373e51] mb-4">Security</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Your data is precious. We implement industry-standard security practices across all our solutions.
                 </p>
               </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-700" style={{ transitionDelay: visible ? '280ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-12 h-12 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] rounded-lg mb-4"></div>
                 <h3 className="text-2xl font-bold text-[#373e51] mb-4">Support</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Fast on-site support with local presence. We're here when you need us most.
                 </p>
               </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-700" style={{ transitionDelay: visible ? '360ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-12 h-12 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] rounded-lg mb-4"></div>
                 <h3 className="text-2xl font-bold text-[#373e51] mb-4">Transparency</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -71,13 +76,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+  {/* Why Choose Us */}
+  <section className={`py-20 bg-white transform transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-[#373e51] mb-12 text-center">Why Choose ForgeTech?</h2>
             <div className="space-y-6">
-              <div className="flex gap-4">
+              <div className="flex gap-4 transform transition-all duration-700" style={{ transitionDelay: visible ? '140ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">Local Presence with Fast Support</h3>
@@ -85,7 +90,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 transform transition-all duration-700" style={{ transitionDelay: visible ? '200ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">Certified Vendors & Warranties</h3>
@@ -93,7 +98,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 transform transition-all duration-700" style={{ transitionDelay: visible ? '260ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">End-to-End Project Management</h3>
@@ -101,7 +106,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 transform transition-all duration-700" style={{ transitionDelay: visible ? '320ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">Transparent Pricing</h3>
@@ -109,7 +114,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 transform transition-all duration-700" style={{ transitionDelay: visible ? '380ms' : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(12px)' }}>
                 <div className="w-8 h-8 bg-[#ff6219] text-white rounded-full flex items-center justify-center shrink-0 font-bold">✓</div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#373e51] mb-2">International Standards</h3>
@@ -121,8 +126,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-linear-to-br from-[#ff6219] to-[#ff7a3d]">
+  {/* CTA Section */}
+  <section className={`py-20 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] transform transition-all duration-700 delay-400 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
