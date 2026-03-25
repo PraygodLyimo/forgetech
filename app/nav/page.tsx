@@ -35,7 +35,7 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setMobileMenuOpen(false);
     };
-    
+
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as Element;
       if (!target.closest('header')) {
@@ -65,12 +65,11 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
   };
 
   return (
-    <header 
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-white shadow-md'
-      } ${className}`}
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-lg'
+        : 'bg-white shadow-md'
+        } ${className}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo and Brand */}
@@ -130,11 +129,11 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
       {mobileMenuOpen && (
         <>
           {/* Backdrop */}
-          <div 
+          <div
             className="fixed inset-0 bg-black/20 z-40 md:hidden"
             onClick={() => setMobileMenuOpen(false)}
           />
-          
+
           {/* Mobile Menu */}
           <div className="md:hidden fixed top-full left-0 right-0 bg-white border-t border-gray-100 shadow-2xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto">
             <nav className="container mx-auto px-4 py-6">
@@ -150,7 +149,7 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
                     {item.label}
                   </Link>
                 ))}
-                
+
                 <div className="pt-4 mt-4 border-t border-gray-100">
                   <button
                     onClick={() => {

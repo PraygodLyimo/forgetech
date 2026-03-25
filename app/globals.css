@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #f1d8c6;
   --foreground: #000000;
-  
+
   /* shadcn/ui variables */
   --primary: #ff6219;
   --primary-foreground: #ffffff;
@@ -19,7 +20,7 @@
   --input: #e5e7eb;
   --ring: #ff6219;
   --radius: 0.625rem;
-  
+
   /* Card variables */
   --card: #ffffff;
   --card-foreground: #171717;
@@ -39,10 +40,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Utility for using Roboto Condensed via className: font-roboto-condensed */
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
 .bg-background {
   background-color: var(--background);
 }
 
 .text-foreground {
   color: var(--foreground);
+}
+
+/* Border Beam Animation */
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
 }

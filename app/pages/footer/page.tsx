@@ -1,60 +1,166 @@
+'use client';
+import { FadeIn } from '@/components/animate-ui/fade-in';
+import { Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+
 export default function Footer() {
-    return (
-        <footer className="bg-[#373e51] text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="col-span-2 md:col-span-1">
-              <div className="text-2xl font-bold text-[#ff6219] mb-4">ForgeTech</div>
-              <p className="text-gray-300 mb-4">Leading ICT solutions provider in East Africa, delivering reliable technology infrastructure and support.</p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-[#ff6219] transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                  </svg>
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#ff6219] transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
+  const socialLinks = [
+    { name: 'Facebook', icon: Facebook, href: '#' },
+    { name: 'Twitter', icon: Twitter, href: '#' },
+    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: '#' },
+  ];
+
+  const brandName = "FORGETECH";
+
+  return (
+    <footer className="relative bg-[#373e51] text-white pt-10 pb-8 border-t border-white/10 overflow-hidden">
+      {/* Background Texture (Dot Pattern) */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+
+      {/* Ambient Glow */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#ff6219]/10 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-8">
+          {/* Brand Section */}
+          <div className="md:col-span-4 space-y-6">
+            <FadeIn delay={0} direction="up">
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+                  <motion.div
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative w-10 h-10"
+                  >
+                    <Image
+                      src="/f-icon.png"
+                      alt="ForgeTech Icon"
+                      fill
+                      className="object-contain"
+                    />
+                  </motion.div>
+                  <div className="flex overflow-hidden">
+                    {brandName.split("").map((letter, idx) => (
+                      <motion.span
+                        key={idx}
+                        initial={{ y: 20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 + idx * 0.05, duration: 0.5, ease: "easeOut" }}
+                        className={letter === "T" || letter === "E" || letter === "C" || letter === "H" && idx > 4 ? "text-[#ff6219]" : "text-white"}
+                        style={{ color: idx >= 5 ? "#ff6219" : "white" }}
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
+                  </div>
+                </span>
+                <span className="text-xs text-[#ff6219] uppercase tracking-[0.3em] mt-2 font-black">
+                  ICT Excellence & Engineering
+                </span>
               </div>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-[#ff6219] transition-colors">ICT Consultancy</a></li>
-                <li><a href="#" className="hover:text-[#ff6219] transition-colors">Networking</a></li>
-                <li><a href="#" className="hover:text-[#ff6219] transition-colors">Security Systems</a></li>
-                <li><a href="#" className="hover:text-[#ff6219] transition-colors">Cloud Solutions</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#about" className="hover:text-[#ff6219] transition-colors">About Us</a></li>
-                <li><a href="#services" className="hover:text-[#ff6219] transition-colors">Our Services</a></li>
-                <li><a href="#contact" className="hover:text-[#ff6219] transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-[#ff6219] transition-colors">Careers</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Contact Info</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>Arusha, Tanzania</li>
-                <li>+255 784 142 152</li>
-                <li>info@forgetechtz.com</li>
-              </ul>
-            </div>
+              <p className="text-gray-300 text-base leading-relaxed max-w-sm">
+                Deploying enterprise-grade technology infrastructure across East Africa with world-class precision and local support.
+              </p>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#ff6219] hover:border-[#ff6219] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group shadow-xl"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
           </div>
-          
-          <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2025 ForgeTech. All rights reserved.</p>
+
+          {/* Company Links */}
+          <div className="md:col-span-2">
+            <FadeIn delay={0.2} direction="up">
+              <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span className="w-1.5 h-1.5 bg-[#ff6219] rounded-full"></span>
+                Links
+              </h4>
+              <ul className="space-y-4">
+                {['About Us', 'Services', 'Products', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <a href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-sm text-gray-400 hover:text-white transition-all duration-300 block font-semibold hover:translate-x-1">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+
+          {/* Legal/Support */}
+          <div className="md:col-span-2">
+            <FadeIn delay={0.3} direction="up">
+              <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
+                <span className="w-1.5 h-1.5 bg-[#ff6219] rounded-full"></span>
+                Support
+              </h4>
+              <ul className="space-y-4">
+                {['Portal', 'Terms', 'Privacy', 'Careers'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-sm text-gray-400 hover:text-white transition-all duration-300 block font-semibold hover:translate-x-1">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+
+          {/* Newsletter Section */}
+          <div className="md:col-span-4">
+            <FadeIn delay={0.4} direction="up">
+              <div className="bg-white/[0.03] border border-white/10 rounded-[2rem] p-6 backdrop-blur-xl relative overflow-hidden group">
+                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#ff6219]/10 rounded-full blur-2xl group-hover:bg-[#ff6219]/20 transition-colors duration-500" />
+
+                <h4 className="text-white text-lg font-bold mb-2">Join the Forge</h4>
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">Subscribe for the latest enterprise ICT insights and system updates.</p>
+
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Engineering Email"
+                    className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6219] focus:ring-1 focus:ring-[#ff6219]/30 transition-all font-medium"
+                  />
+                  <button className="absolute right-2 top-2 bottom-2 px-4 bg-[#ff6219] rounded-xl hover:bg-[#e55a17] transition-all shadow-lg hover:shadow-[#ff6219]/30 flex items-center justify-center">
+                    <ArrowRight className="w-5 h-5 text-white" />
+                  </button>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
-      </footer>
-    );
 
+        {/* Bottom Bar */}
+        <FadeIn delay={0.5} direction="up">
+          <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">
+              <p className="text-sm text-gray-400 font-bold tracking-tight">
+                &copy; 2025 <span className="text-white">ForgeTech Tanzania</span>
+              </p>
+              <span className="hidden md:block w-1 h-1 bg-white/20 rounded-full"></span>
+              <p className="text-sm text-gray-500 font-medium italic">Building Digital Foundations</p>
+            </div>
+
+            <div className="flex items-center gap-8">
+              <p className="text-xs text-gray-500 font-bold flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                System Status: Nominal
+              </p>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </footer>
+  );
 }

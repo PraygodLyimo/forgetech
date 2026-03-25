@@ -1,60 +1,131 @@
 "use client";
 
-import { FaNetworkWired, FaShieldAlt, FaCloud, FaBolt, FaPhone, FaBriefcase } from "react-icons/fa";
+import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
+import { BellIcon, Share2Icon } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import AnimatedBeamMultipleOutputDemo from "@/components/examples/animated-beam-multiple-outputs";
+import AnimatedListDemo from "@/components/examples/animated-list-demo";
+import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
+import { Marquee } from "@/components/magicui/marquee";
+
+const services = [
+  {
+    name: "ICT Consultancy & Support",
+    body: "Infrastructure planning, managed support, documentation and SLA-based maintenance for your organization.",
+  },
+  {
+    name: "Networking Solutions",
+    body: "Structured cabling, fiber optics, network design, switching and WiFi optimization for seamless connectivity.",
+  },
+  {
+    name: "Security & Surveillance",
+    body: "CCTV installations, NVR systems, access control and alarm systems to protect your assets.",
+  },
+  {
+    name: "Power & Backup",
+    body: "UPS systems, battery banks and generator integration for high-availability sites and critical infrastructure.",
+  },
+  {
+    name: "Cloud & Servers",
+    body: "Server room design, virtualization, cloud migration and managed hosting solutions for modern businesses.",
+  },
+  {
+    name: "Business Communication",
+    body: "IP telephony, PBX systems, video conferencing and unified communications for efficient collaboration.",
+  },
+];
+
+const features = [
+  {
+    Icon: FileTextIcon,
+    name: "Our Services",
+    description: "Comprehensive ICT solutions tailored to your needs.",
+    href: "/services",
+    cta: "View All",
+    className: "col-span-3 lg:col-span-1",
+    background: (
+      <Marquee
+        pauseOnHover
+        className="absolute top-10 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] [--duration:20s]"
+      >
+        {services.map((s, idx) => (
+          <figure
+            key={idx}
+            className={cn(
+              "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
+              "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+              "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
+            )}
+          >
+            <div className="flex flex-row items-center gap-2">
+              <div className="flex flex-col">
+                <figcaption className="text-sm font-medium dark:text-white">
+                  {s.name}
+                </figcaption>
+              </div>
+            </div>
+            <blockquote className="mt-2 text-xs">{s.body}</blockquote>
+          </figure>
+        ))}
+      </Marquee>
+    ),
+  },
+  {
+    Icon: BellIcon,
+    name: "Service Updates",
+    description: "Get notified about project milestones and service requests.",
+    href: "/contact",
+    cta: "Contact Us",
+    className: "col-span-3 lg:col-span-2",
+    background: (
+      <AnimatedListDemo className="absolute top-4 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90" />
+    ),
+  },
+  {
+    Icon: Share2Icon,
+    name: "Integrated Solutions",
+    description: "Complete ICT ecosystem for your organization.",
+    href: "/get-quote",
+    cta: "Get Quote",
+    className: "col-span-3 lg:col-span-2",
+    background: (
+      <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
+    ),
+  },
+  {
+    Icon: CalendarIcon,
+    name: "Schedule Consultation",
+    description: "Book a consultation to discuss your ICT needs.",
+    className: "col-span-3 lg:col-span-1",
+    href: "/contact",
+    cta: "Book Now",
+    background: (
+      <Calendar
+        mode="single"
+        selected={new Date()}
+        className="absolute top-10 right-0 origin-top scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      />
+    ),
+  },
+];
 
 export default function ServicesPage() {
-  const services = [
-    { title: "ICT Consultancy & Support", desc: "Infrastructure planning, managed support, documentation and SLA-based maintenance.", key: "consult" },
-    { title: "Networking Solutions", desc: "Structured cabling, fiber, network design, switching and WiFi optimisation.", key: "networking" },
-    { title: "Security & Surveillance", desc: "CCTV installations, NVR systems, access control and alarm systems.", key: "security" },
-    { title: "Power & Backup", desc: "UPS, battery banks and generator integration for high-availability sites.", key: "power" },
-    { title: "Cloud & Servers", desc: "Server room design, virtualization, cloud migration and managed hosting.", key: "cloud" },
-    { title: "Business Communication", desc: "IP telephony, PBX, video conferencing and unified communications.", key: "communication" },
-  ];
-
-  const iconMap: Record<string, any> = {
-    networking: FaNetworkWired,
-    security: FaShieldAlt,
-    cloud: FaCloud,
-    power: FaBolt,
-    communication: FaPhone,
-    consult: FaBriefcase,
-  };
-
   return (
-    <section id="services" className="py-20">
-      <div className="mx-auto px-4 text-center">
+    <section id="services" className="py-20 bg-gradient-to-b from-white to-[#fff9f5]">
+      <div className="mx-auto px-4 text-center max-w-7xl">
         <h2 className="text-4xl font-bold mb-4 text-[#373e51]">Our Services</h2>
         <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
           We provide a comprehensive range of ICT solutions, tailored to meet the unique needs of your organization and ensure optimal performance, security, and scalability.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((s) => {
-            const Icon = iconMap[s.key] || FaBriefcase;
-            return (
-              <div
-                key={s.title}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
-              >
-                <Icon
-                  size={48}
-                  className="mx-auto mb-4 text-[#ff6219] group-hover:scale-110 transition-transform duration-300"
-                />
-                <h4 className="font-bold text-lg mb-3 text-[#373e51]">{s.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{s.desc}</p>
-                <div className="mt-6">
-                  <a
-                    href={`/get-quote?type=service&item=${encodeURIComponent(s.title)}`}
-                    className="inline-block bg-[#ff6219] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#e55a17] transition-colors"
-                  >
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <BentoGrid>
+          {features.map((feature, idx) => (
+            <BentoCard key={idx} {...feature} />
+          ))}
+        </BentoGrid>
       </div>
     </section>
   );
