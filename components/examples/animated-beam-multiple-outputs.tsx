@@ -31,6 +31,14 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
+// Logo replacement for center
+const CenterLogo = () => (
+    <div className="flex flex-col items-center justify-center">
+        <span className="text-xs font-bold text-[#ff6219]">FORGE</span>
+        <span className="text-[10px] text-gray-500">TECH</span>
+    </div>
+);
+
 export default function AnimatedBeamMultipleOutputDemo({
     className,
 }: {
@@ -42,14 +50,6 @@ export default function AnimatedBeamMultipleOutputDemo({
     const div3Ref = useRef<HTMLDivElement>(null);
     const div4Ref = useRef<HTMLDivElement>(null);
     const div5Ref = useRef<HTMLDivElement>(null);
-
-    // Logo replacement for center
-    const CenterLogo = () => (
-        <div className="flex flex-col items-center justify-center">
-            <span className="text-xs font-bold text-[#ff6219]">FORGE</span>
-            <span className="text-[10px] text-gray-500">TECH</span>
-        </div>
-    );
 
     return (
         <div

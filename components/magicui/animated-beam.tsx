@@ -91,7 +91,7 @@ export function AnimatedBeam({
         };
 
         // Initialize ResizeObserver
-        const resizeObserver = new ResizeObserver((entries) => {
+        const resizeObserver = new ResizeObserver(() => {
             // For now, just update path on any resize
             updatePath();
         });

@@ -87,7 +87,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"
             >
-              Ready to transform your ICT infrastructure? Contact us today for a free consultation and let's build something great together.
+              Ready to transform your ICT infrastructure? Contact us today for a free consultation and let&apos;s build something great together.
             </motion.p>
           </div>
         </div>

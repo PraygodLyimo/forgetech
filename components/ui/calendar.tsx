@@ -9,7 +9,7 @@ export type CalendarProps = {
     className?: string;
 };
 
-export function Calendar({ mode, selected, className }: CalendarProps) {
+export function Calendar({ selected, className }: CalendarProps) {
     const currentDate = selected || new Date();
     const monthNames = [
         "January", "February", "March", "April", "May", "June",

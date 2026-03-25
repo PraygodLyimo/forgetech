@@ -12,7 +12,6 @@ function QuoteForm() {
   const initialType = (searchParams.get('type') || '').trim() || '';
 
   const [selectedType, setSelectedType] = useState(initialType || 'product');
-  const [selectedItem, setSelectedItem] = useState(initialItem);
 
   // product and service lists (kept inline for now)
   const productsList = [
@@ -35,13 +34,19 @@ function QuoteForm() {
     'Business Communication',
   ];
 
+  const getDefaultItem = (type: string) => {
+    const list = type === 'product' ? productsList : servicesList;
+    return list.length ? list[0] : '';
+  };
+
+  const [selectedItem, setSelectedItem] = useState(initialItem || getDefaultItem(selectedType));
+
+  // Update selectedItem when type changes if it's empty
   useEffect(() => {
-    // if user accessed directly and no item chosen, default to the first item of selectedType
     if (!selectedItem) {
-      const list = selectedType === 'product' ? productsList : servicesList;
-      if (list.length) setSelectedItem(list[0]);
+      setSelectedItem(getDefaultItem(selectedType));
     }
-  }, [selectedType]);
+  }, [selectedType, selectedItem]);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

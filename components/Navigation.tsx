@@ -22,6 +22,13 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Close mobile menu when route changes
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
 
   // Handle scroll effect for navigation background
   useEffect(() => {
@@ -57,11 +64,6 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
       document.body.style.overflow = 'auto';
     };
   }, [mobileMenuOpen]);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   const handleContactClick = () => {
     if (onContactClick) {

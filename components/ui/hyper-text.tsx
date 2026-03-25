@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, useMemo } from "react"
 import { AnimatePresence, motion, MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
@@ -49,9 +49,9 @@ export function HyperText({
   textClass = "text-5xl md:text-6xl lg:text-7xl",
   ...props
 }: HyperTextProps) {
-  const MotionComponent = motion.create(Component, {
+  const MotionComponent = useMemo(() => motion.create(Component, {
     forwardMotionProps: true,
-  })
+  }), [Component])
 
   const [displayText, setDisplayText] = useState<string[]>(() =>
     children.split("")
@@ -133,7 +133,7 @@ export function HyperText({
 
   return (
     <MotionComponent
-      ref={elementRef}
+      ref={elementRef as any}
       className={cn("overflow-hidden py-2 font-bold", textClass, className)}
       onMouseEnter={handleAnimationTrigger}
       {...props}

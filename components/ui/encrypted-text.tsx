@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { motion, MotionProps } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +35,8 @@ export function EncryptedText({
     const [displayText, setDisplayText] = useState<string>(text);
     const [isAnimating, setIsAnimating] = useState(false);
     const elementRef = useRef<HTMLElement>(null);
+
+    const MotionComponent = useMemo(() => motion.create(Component), [Component]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -94,11 +96,9 @@ export function EncryptedText({
         return () => cancelAnimationFrame(animationFrameId);
     }, [isAnimating, text, duration, characterSet]);
 
-    const MotionComponent = motion.create(Component);
-
     return (
         <MotionComponent
-            ref={elementRef}
+            ref={elementRef as any}
             className={cn("inline-block", className)}
             {...props}
         >
