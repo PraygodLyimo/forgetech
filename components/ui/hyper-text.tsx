@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState, useMemo } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion, MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
@@ -17,7 +17,7 @@ interface HyperTextProps extends MotionProps {
   /** Delay before animation starts in milliseconds */
   delay?: number
   /** Component to render as - defaults to div */
-  as?: React.ElementType
+  as?: "div" | "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   /** Whether to start animation when element comes into view */
   startOnView?: boolean
   /** Whether to trigger animation on hover */
@@ -36,6 +36,14 @@ const DEFAULT_CHARACTER_SET = Object.freeze(
 
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max)
 
+// Static motion components to satisfy react-hooks/static-components
+const MotionDiv = motion.div;
+const MotionSpan = motion.span;
+const MotionP = motion.p;
+const MotionH1 = motion.h1;
+const MotionH2 = motion.h2;
+const MotionH3 = motion.h3;
+
 export function HyperText({
   children,
   className,
@@ -49,16 +57,23 @@ export function HyperText({
   textClass = "text-5xl md:text-6xl lg:text-7xl",
   ...props
 }: HyperTextProps) {
-  const MotionComponent = useMemo(() => motion.create(Component, {
-    forwardMotionProps: true,
-  }), [Component])
-
   const [displayText, setDisplayText] = useState<string[]>(() =>
     children.split("")
   )
   const [isAnimating, setIsAnimating] = useState(false)
   const iterationCount = useRef(0)
   const elementRef = useRef<HTMLElement>(null)
+
+  // Select the appropriate static motion component
+  let MotionComp: any = MotionDiv;
+  switch (Component) {
+      case "span": MotionComp = MotionSpan; break;
+      case "p": MotionComp = MotionP; break;
+      case "h1": MotionComp = MotionH1; break;
+      case "h2": MotionComp = MotionH2; break;
+      case "h3": MotionComp = MotionH3; break;
+      default: MotionComp = MotionDiv;
+  }
 
   const handleAnimationTrigger = () => {
     if (animateOnHover && !isAnimating) {
@@ -132,7 +147,7 @@ export function HyperText({
   }, [children, duration, isAnimating, characterSet])
 
   return (
-    <MotionComponent
+    <MotionComp
       ref={elementRef as any}
       className={cn("overflow-hidden py-2 font-bold", textClass, className)}
       onMouseEnter={handleAnimationTrigger}
@@ -148,6 +163,6 @@ export function HyperText({
           </motion.span>
         ))}
       </AnimatePresence>
-    </MotionComponent>
+    </MotionComp>
   )
 }

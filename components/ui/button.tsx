@@ -50,13 +50,14 @@ function Button({
   }) {
   const Comp = asChild ? Slot : motion.button
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      {...props}
+      {...(props as any)}
     />
   )
 }

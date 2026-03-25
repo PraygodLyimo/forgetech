@@ -5,7 +5,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import Link from 'next/link';
 
 import { FadeIn } from '@/components/animate-ui/fade-in';
-import { Network, Shield, Cloud, Zap, Phone, Package, Search, LayoutGrid, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Network, Shield, Cloud, Zap, Phone, Package, LayoutGrid, CheckCircle2, ArrowRight } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WHATSAPP_NUMBER = '+255657530700';

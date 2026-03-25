@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, MotionProps } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +14,7 @@ interface EncryptedTextProps extends MotionProps {
     /** Delay before animation starts in milliseconds */
     delay?: number;
     /** Component to render as - defaults to div */
-    as?: React.ElementType;
+    as?: "div" | "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     /** Custom character set for scramble effect. Defaults to uppercase alphabet */
     characterSet?: string[];
 }
@@ -22,6 +22,14 @@ interface EncryptedTextProps extends MotionProps {
 const DEFAULT_CHARACTER_SET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()".split("");
 
 const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
+
+// Static motion components to satisfy react-hooks/static-components
+const MotionDiv = motion.div;
+const MotionSpan = motion.span;
+const MotionP = motion.p;
+const MotionH1 = motion.h1;
+const MotionH2 = motion.h2;
+const MotionH3 = motion.h3;
 
 export function EncryptedText({
     text,
@@ -36,7 +44,16 @@ export function EncryptedText({
     const [isAnimating, setIsAnimating] = useState(false);
     const elementRef = useRef<HTMLElement>(null);
 
-    const MotionComponent = useMemo(() => motion.create(Component), [Component]);
+    // Select the appropriate static motion component
+    let MotionComp: any = MotionDiv;
+    switch (Component) {
+        case "span": MotionComp = MotionSpan; break;
+        case "p": MotionComp = MotionP; break;
+        case "h1": MotionComp = MotionH1; break;
+        case "h2": MotionComp = MotionH2; break;
+        case "h3": MotionComp = MotionH3; break;
+        default: MotionComp = MotionDiv;
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -97,12 +114,12 @@ export function EncryptedText({
     }, [isAnimating, text, duration, characterSet]);
 
     return (
-        <MotionComponent
+        <MotionComp
             ref={elementRef as any}
             className={cn("inline-block", className)}
             {...props}
         >
             {displayText}
-        </MotionComponent>
+        </MotionComp>
     );
 }
