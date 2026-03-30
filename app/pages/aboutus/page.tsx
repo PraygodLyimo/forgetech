@@ -1,4 +1,6 @@
 import { FadeIn } from '@/components/animate-ui/fade-in';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
     return (
@@ -8,51 +10,24 @@ export default function AboutPage() {
                     <h3 className="text-3xl font-bold mb-12 text-[#373e51] text-center">About ForgeTech</h3>
                 </FadeIn>
 
-                <div className="grid gap-12 md:grid-cols-2">
-                    <FadeIn delay={0.2} direction="up" className="h-full">
-                        <div className="p-8 rounded-2xl shadow-lg h-full bg-white/50 backdrop-blur-xs">
-                            <p className="text-gray-600 mb-6 leading-relaxed">ForgeTech is a leading ICT company based in Arusha, Tanzania. Our team of certified engineers and technicians delivers reliable, scalable and maintainable solutions — from small business networks to enterprise grade server rooms and security systems. We prioritise uptime, security and clear documentation so your operations keep running.</p>
-                            <h4 className="font-bold text-lg mb-4 text-[#373e51]">Why choose us</h4>
-                            <ul className="space-y-3 text-gray-600">
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 bg-[#ff6219] rounded-full mt-2 shrink-0"></span>
-                                    Local presence with fast on-site support.
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 bg-[#ff6219] rounded-full mt-2 shrink-0"></span>
-                                    Certified vendors and warranties.
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 bg-[#ff6219] rounded-full mt-2 shrink-0"></span>
-                                    End-to-end project management and maintenance.
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 bg-[#ff6219] rounded-full mt-2 shrink-0"></span>
-                                    Transparent pricing and clear SLAs.
-                                </li>
-                            </ul>
-                        </div>
-                    </FadeIn>
-
-                    <FadeIn delay={0.4} direction="up" className="h-full">
-                        <div className="bg-white p-8 rounded-2xl shadow-lg h-full border border-gray-100">
-                            <h4 className="font-bold text-xl mb-4 text-[#373e51] text-center">Check Coverage & Quick Inquiry</h4>
-                            <p className="text-gray-600 mb-6 text-center">Enter your ward or address and let us know what you need.</p>
-                            <div className="space-y-4">
-                                <input
-                                    placeholder="Enter address or ward"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200"
-                                />
-                                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200 bg-white">
-                                    <option>Networking</option>
-                                    <option>Security Systems</option>
-                                    <option>Cloud & Servers</option>
-                                    <option>Managed Services</option>
-                                </select>
-                            </div>
-                            <div className="flex gap-3 mt-6">
-                                <button className="flex-1 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-3 rounded-lg hover:from-[#e55a17] hover:to-[#e56b35] transition-colors duration-200 shadow-md">Check</button>
-                                <button className="flex-1 border-2 border-[#ff6219] text-[#ff6219] rounded-lg py-3 font-bold hover:bg-[#ff6219] hover:text-white transition-colors duration-200">Request Call</button>
+                <div className="max-w-4xl mx-auto text-center">
+                    <FadeIn delay={0.2} direction="up">
+                        <div className="p-8 md:p-12 rounded-[2rem] shadow-xl bg-white border border-orange-50 relative overflow-hidden">
+                            {/* Decorative background element */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+                            
+                            <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed relative z-10">
+                                ForgeTech is a premier ICT company based in Arusha, Tanzania. Our certified engineers deliver reliable, scalable solutions—from enterprise networks to advanced security systems. We prioritize uptime, robust security, and engineering excellence so your operations never stop.
+                            </p>
+                            
+                            <div className="relative z-10">
+                                <Link 
+                                    href="/about"
+                                    className="inline-flex items-center gap-2 bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-4 px-8 rounded-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                >
+                                    Read Our Full Story
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
                             </div>
                         </div>
                     </FadeIn>

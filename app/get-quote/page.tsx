@@ -26,12 +26,12 @@ function QuoteForm() {
   ];
 
   const servicesList = [
-    'ICT Consultancy & Support',
-    'Networking Solutions',
-    'Security & Surveillance',
-    'Power & Backup',
-    'Cloud & Servers',
-    'Business Communication',
+    'Custom Software Development',
+    'Cloud-Native Systems',
+    'Cyber Security & Audit',
+    'AI & Data Solutions',
+    'Modern Networking',
+    'IoT & Smart Systems',
   ];
 
   const getDefaultItem = (type: string) => {

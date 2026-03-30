@@ -5,9 +5,9 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import {
-    Wifi,
-    Server,
-    ShieldCheck,
+    Code,
+    Brain,
+    Shield,
     Cloud
 } from "lucide-react";
 
@@ -62,10 +62,10 @@ export default function AnimatedBeamMultipleOutputDemo({
             <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={div1Ref}>
-                        <Wifi className="h-6 w-6 text-black" />
+                        <Code className="h-6 w-6 text-[#ff6219]" />
                     </Circle>
                     <Circle ref={div5Ref}>
-                        <Cloud className="h-6 w-6 text-black" />
+                        <Cloud className="h-6 w-6 text-[#ff6219]" />
                     </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
@@ -79,10 +79,10 @@ export default function AnimatedBeamMultipleOutputDemo({
                 </div>
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={div2Ref}>
-                        <Server className="h-6 w-6 text-black" />
+                        <Brain className="h-6 w-6 text-[#ff6219]" />
                     </Circle>
                     <Circle ref={div4Ref}>
-                        <ShieldCheck className="h-6 w-6 text-black" />
+                        <Shield className="h-6 w-6 text-[#ff6219]" />
                     </Circle>
                 </div>
             </div>

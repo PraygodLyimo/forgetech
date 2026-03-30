@@ -1,122 +1,69 @@
 'use client';
 import { FadeIn } from '@/components/animate-ui/fade-in';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="mx-auto">
+    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+        {/* Background Decorative */}
+        <div className="absolute -left-32 -bottom-32 w-96 h-96 bg-orange-50 rounded-full blur-3xl opacity-50" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <FadeIn direction="up">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-[#373e51]">Get In Touch</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Ready to transform your ICT infrastructure? Contact us today for a free consultation.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#373e51]">Get In Touch</h2>
+            <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+              Ready to transform your ICT infrastructure? Connect with our engineering team today.
+            </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <FadeIn delay={0.2} direction="up" className="h-full">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#373e51]">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#ff6219] rounded-lg flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#373e51]">Location</h4>
+        <div className="max-w-5xl mx-auto">
+          <FadeIn delay={0.2} direction="up">
+            <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 md:p-12">
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                
+                {/* Location */}
+                <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors group">
+                    <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <MapPin className="w-8 h-8 text-[#ff6219]" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#373e51] mb-2">Location</h3>
                     <p className="text-gray-600">Arusha, Tanzania</p>
-                  </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#ff6219] rounded-lg flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#373e51]">Phone</h4>
+                {/* Phone */}
+                <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors group">
+                    <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <Phone className="w-8 h-8 text-[#ff6219]" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#373e51] mb-2">Phone</h3>
                     <p className="text-gray-600">+255 784 142 152</p>
-                  </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#ff6219] rounded-lg flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#373e51]">Email</h4>
+                {/* Email */}
+                <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors group">
+                    <div className="w-16 h-16 bg-white rounded-full shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <Mail className="w-8 h-8 text-[#ff6219]" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#373e51] mb-2">Email</h3>
                     <p className="text-gray-600">info@forgetechtz.com</p>
-                  </div>
                 </div>
+
               </div>
-            </div>
-          </FadeIn>
 
-          <FadeIn delay={0.4} direction="up" className="h-full">
-            <div className="bg-white p-8 rounded-2xl shadow-lg h-full">
-              <form id="contactForm" className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-[#373e51] mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-[#373e51] mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-semibold text-[#373e51] mb-2">Service Needed</label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200 bg-white"
+              <div className="text-center pt-8 border-t border-gray-100">
+                  <p className="text-gray-500 mb-6">Need a detailed consultation or want to submit an inquiry?</p>
+                  <Link 
+                    href="/contact"
+                    className="inline-flex items-center gap-3 bg-[#373e51] text-white font-bold py-4 px-10 rounded-full hover:bg-[#ff6219] hover:-translate-y-1 transition-all duration-300 shadow-xl"
                   >
-                    <option value="">Select a service</option>
-                    <option value="networking">Networking Solutions</option>
-                    <option value="security">Security & Surveillance</option>
-                    <option value="cloud">Cloud & Servers</option>
-                    <option value="power">Power & Backup</option>
-                    <option value="consultation">ICT Consultancy</option>
-                    <option value="communication">Business Communication</option>
-                  </select>
-                </div>
+                      Visit Interaction Center
+                      <ArrowRight className="w-5 h-5" />
+                  </Link>
+              </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-[#373e51] mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-200 resize-vertical"
-                    placeholder="Tell us about your project requirements..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-3 px-6 rounded-lg hover:from-[#e55a17] hover:to-[#e56b35] transition-colors duration-200 shadow-md"
-                >
-                  Send Message
-                </button>
-              </form>
             </div>
           </FadeIn>
         </div>

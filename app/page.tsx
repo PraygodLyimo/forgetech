@@ -1,20 +1,16 @@
 'use client';
 
-import AboutPage from "./pages/aboutus/page";
-import ContactPage from "./pages/contact/page";
 import HeroPage from "./pages/hero/page";
-import ServicesPage from "./pages/services/page";
-
-
+import { ServicesOverview } from "@/components/home/services-overview";
+import { CompanyLogos } from "@/components/home/company-logos";
 
 export default function Home() {
   return (
     <>
       <main>
         <HeroPage />
-        <ServicesPage />
-        <AboutPage />
-        <ContactPage />
+        <ServicesOverview />
+        <CompanyLogos />
       </main>
     </>
   );

@@ -1,14 +1,14 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import {
-  IconMapPin,
-  IconPhone,
-  IconMail,
-  IconClock,
-  IconCheck,
-  IconSend
-} from '@tabler/icons-react';
+import { 
+  MapPin as IconMapPin, 
+  Phone as IconPhone, 
+  Mail as IconMail, 
+  Clock as IconClock, 
+  Check as IconCheck, 
+  Send as IconSend 
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { EncryptedText } from '@/components/ui/encrypted-text';
@@ -246,12 +246,12 @@ export default function ContactPage() {
                           className="w-full px-5 py-4 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-300 bg-white cursor-pointer"
                         >
                           <option value="">Select a service</option>
-                          <option value="networking">Networking Solutions</option>
-                          <option value="security">Security & Surveillance</option>
-                          <option value="cloud">Cloud & Servers</option>
-                          <option value="power">Power & Backup</option>
-                          <option value="consultation">ICT Consultancy</option>
-                          <option value="communication">Business Communication</option>
+                          <option value="software">Custom Software</option>
+                          <option value="cloud">Cloud-Native Systems</option>
+                          <option value="security">Cyber Security</option>
+                          <option value="ai">AI & Data Solutions</option>
+                          <option value="networking">Modern Networking</option>
+                          <option value="iot">IoT & Smart Systems</option>
                           <option value="other">Other</option>
                         </select>
                       </div>
@@ -290,8 +290,31 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Coverage Check Section */}
+      <section className="py-24 bg-orange-50/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-white rounded-[3rem] p-10 md:p-16 shadow-xl border border-orange-100 flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-[#373e51] mb-6">Check Service Coverage</h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-0">
+                Wondering if we can deploy at your specific location? Enter your ward or address and our team will verify the infrastructure availability in your area.
+              </p>
+            </div>
+            <div className="w-full md:w-80 space-y-4">
+              <input
+                placeholder="Enter address or ward"
+                className="w-full px-6 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#ff6219] transition-all"
+              />
+              <button className="w-full bg-[#373e51] text-white font-bold py-4 rounded-2xl hover:bg-[#ff6219] transition-colors shadow-lg shadow-orange-500/10">
+                Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Map Section */}
-      <section className="py-20 bg-orange-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#373e51] mb-8 text-center">Our Location</h2>
           <motion.div

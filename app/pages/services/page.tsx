@@ -1,7 +1,6 @@
 "use client";
 
-import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
-import { BellIcon, Share2Icon } from "lucide-react";
+import { Calendar as CalendarIcon, FileText as FileTextIcon, Bell as BellIcon, Share2 as Share2Icon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
@@ -12,28 +11,28 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const services = [
   {
-    name: "ICT Consultancy & Support",
-    body: "Infrastructure planning, managed support, documentation and SLA-based maintenance for your organization.",
+    name: "Custom Software",
+    body: "Enterprise-grade web and mobile applications built with modern frameworks like React, Next.js, and Node.js.",
   },
   {
-    name: "Networking Solutions",
-    body: "Structured cabling, fiber optics, network design, switching and WiFi optimization for seamless connectivity.",
+    name: "Cloud-Native Systems",
+    body: "Scalable architectures on AWS, Azure, and Google Cloud with DevOps automation and serverless computing.",
   },
   {
-    name: "Security & Surveillance",
-    body: "CCTV installations, NVR systems, access control and alarm systems to protect your assets.",
+    name: "Cyber Security",
+    body: "End-to-end data protection, digital forensics, and proactive threat management for secure operations.",
   },
   {
-    name: "Power & Backup",
-    body: "UPS systems, battery banks and generator integration for high-availability sites and critical infrastructure.",
+    name: "AI & Data Solutions",
+    body: "Harnessing machine learning and predictive analytics to automate workflows and drive intelligent decisions.",
   },
   {
-    name: "Cloud & Servers",
-    body: "Server room design, virtualization, cloud migration and managed hosting solutions for modern businesses.",
+    name: "Modern Networking",
+    body: "High-speed fiber optics, software-defined networking (SDN), and unified WiFi for seamless global connectivity.",
   },
   {
-    name: "Business Communication",
-    body: "IP telephony, PBX systems, video conferencing and unified communications for efficient collaboration.",
+    name: "IoT & Smart Systems",
+    body: "Connected infrastructure and smart automation solutions for industrial and residential environments.",
   },
 ];
 

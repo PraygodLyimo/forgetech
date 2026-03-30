@@ -80,7 +80,7 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
               alt="Logo"
               width={200}
               height={100}
-              className="bject-contain group-hover:scale-105 transition-transform duration-300"
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </div>
         </Link>

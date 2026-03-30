@@ -69,12 +69,7 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
     if (onContactClick) {
       onContactClick();
     } else {
-      const contactForm = document.getElementById('contactForm');
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        window.location.href = '/contact';
-      }
+      window.location.href = '/contact';
     }
   };
 
