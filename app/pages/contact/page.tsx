@@ -39,7 +39,7 @@ export default function ContactPage() {
                         <Phone className="w-8 h-8 text-[#ff6219]" />
                     </div>
                     <h3 className="text-xl font-bold text-[#373e51] mb-2">Phone</h3>
-                    <p className="text-gray-600">+255 784 142 152</p>
+                    <p className="text-gray-600">+255 758 100137</p>
                 </div>
 
                 {/* Email */}
@@ -48,7 +48,7 @@ export default function ContactPage() {
                         <Mail className="w-8 h-8 text-[#ff6219]" />
                     </div>
                     <h3 className="text-xl font-bold text-[#373e51] mb-2">Email</h3>
-                    <p className="text-gray-600">info@forgetechtz.com</p>
+                    <p className="text-gray-600">info@arushanetworks.com</p>
                 </div>
 
               </div>

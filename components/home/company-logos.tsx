@@ -62,15 +62,15 @@ export function CompanyLogos() {
       </div>
 
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:25s]">
+        <Marquee reverse={true} repeat={6} className="[--duration:30s]">
           {logos.map((logo, idx) => (
             <LogoCard key={idx} {...logo} />
           ))}
         </Marquee>
         
-        {/* Gradients for smooth fade edges - updated to match backdrop colors */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-white"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-white"></div>
+        {/* Gradients for smooth fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-white z-10"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-white z-10"></div>
       </div>
     </section>
   );

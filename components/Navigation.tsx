@@ -91,7 +91,7 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
         {/* Logo and Brand */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="text-2xl font-bold text-[#ff6219] group-hover:scale-105 transition-transform duration-200">
-            ForgeTech
+            Arusha Networking Group
           </div>
           <div className="text-gray-500 font-semibold hidden sm:block">
             ICT • Security • Cloud

@@ -11,28 +11,28 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const services = [
   {
-    name: "Custom Software",
-    body: "Enterprise-grade web and mobile applications built with modern frameworks like React, Next.js, and Node.js.",
+    name: "CCTV & Surveillance",
+    body: "AI 4K IP cameras, 24/7 NVR recording, and mobile remote monitoring for physical security.",
   },
   {
-    name: "Cloud-Native Systems",
-    body: "Scalable architectures on AWS, Azure, and Google Cloud with DevOps automation and serverless computing.",
+    name: "Biometric Access",
+    body: "Fingerprint, facial recognition, smart locks, time attendance, and automated turnstiles.",
   },
   {
-    name: "Cyber Security",
-    body: "End-to-end data protection, digital forensics, and proactive threat management for secure operations.",
+    name: "Intrusion Alarms",
+    body: "Motion sensors, glass break detectors, emergency sirens, and automated SMS alerts.",
   },
   {
-    name: "AI & Data Solutions",
-    body: "Harnessing machine learning and predictive analytics to automate workflows and drive intelligent decisions.",
+    name: "Firewall & Cyber Defense",
+    body: "Next-generation firewalls, encrypted VPN tunnels, and proactive threat management.",
   },
   {
-    name: "Modern Networking",
-    body: "High-speed fiber optics, software-defined networking (SDN), and unified WiFi for seamless global connectivity.",
+    name: "Structured Cabling & Fiber",
+    body: "High-density CAT6/CAT6A copper cabling, fusion fiber splicing, and clean rack management.",
   },
   {
-    name: "IoT & Smart Systems",
-    body: "Connected infrastructure and smart automation solutions for industrial and residential environments.",
+    name: "Wi-Fi 6 & PtP Bridges",
+    body: "Enterprise Wi-Fi 6 coverage with captive guest portals and long-distance Point-to-Point wireless.",
   },
 ];
 

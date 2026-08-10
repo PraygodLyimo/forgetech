@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FaWhatsapp } from 'react-icons/fa';
 
-const WHATSAPP_NUMBER = '+255657530700';
+const WHATSAPP_NUMBER = '+255758100137';
 
 function QuoteForm() {
   const searchParams = useSearchParams();

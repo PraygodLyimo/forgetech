@@ -34,8 +34,7 @@ Circle.displayName = "Circle";
 // Logo replacement for center
 const CenterLogo = () => (
     <div className="flex flex-col items-center justify-center">
-        <span className="text-xs font-bold text-[#ff6219]">FORGE</span>
-        <span className="text-[10px] text-gray-500">TECH</span>
+        <span className="text-xs font-bold text-[#ff6219]">ANG</span>
     </div>
 );
 

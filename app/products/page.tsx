@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { FadeIn } from '@/components/animate-ui/fade-in';
 import { Network, Shield, Cloud, Zap, Phone, Package, LayoutGrid, CheckCircle2, ArrowRight } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '+255657530700';
+const WHATSAPP_NUMBER = '+255758100137';
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -108,7 +108,7 @@ export default function ProductsPage() {
       return;
     }
 
-    const message = `Hi ForgeTech, I'm ${userName.trim()} and I'm interested in inquiring about ${productName} (Purchase Type: ${purchaseType.toUpperCase()})`;
+    const message = `Hi Arusha Networking Group, I'm ${userName.trim()} and I'm interested in inquiring about ${productName} (Purchase Type: ${purchaseType.toUpperCase()})`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 

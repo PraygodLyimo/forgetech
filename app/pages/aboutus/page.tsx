@@ -7,7 +7,7 @@ export default function AboutPage() {
         <section id="about" className="bg-background">
             <div className="mx-auto max-w-7xl px-4 py-20">
                 <FadeIn direction="up">
-                    <h3 className="text-3xl font-bold mb-12 text-[#373e51] text-center">About ForgeTech</h3>
+                    <h3 className="text-3xl font-bold mb-12 text-[#373e51] text-center">About Arusha Networking Group</h3>
                 </FadeIn>
 
                 <div className="max-w-4xl mx-auto text-center">
@@ -17,7 +17,7 @@ export default function AboutPage() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
                             
                             <p className="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed relative z-10">
-                                ForgeTech is a premier ICT company based in Arusha, Tanzania. Our certified engineers deliver reliable, scalable solutions—from enterprise networks to advanced security systems. We prioritize uptime, robust security, and engineering excellence so your operations never stop.
+                                Arusha Networking Group is a premier ICT company based in Arusha, Tanzania. Our certified engineers deliver reliable, scalable solutions—from enterprise networks to advanced security systems. We prioritize uptime, robust security, and engineering excellence so your operations never stop.
                             </p>
                             
                             <div className="relative z-10">

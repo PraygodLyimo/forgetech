@@ -117,14 +117,14 @@ export default function ContactPage() {
                   {
                     icon: IconPhone,
                     title: "Phone",
-                    details: ["+255 784 142 152"],
+                    details: ["+255 758 100137"],
                     subText: "Available Monday - Friday, 8am - 5pm",
                     delay: 0.1
                   },
                   {
                     icon: IconMail,
                     title: "Email",
-                    details: ["info@forgetech.com"],
+                    details: ["info@arushanetworks.com"],
                     subText: "We'll respond within 24 hours",
                     delay: 0.2
                   },
@@ -325,8 +325,8 @@ export default function ContactPage() {
             className="max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl h-[450px] border border-orange-100"
           >
             <iframe
-              title="Forgetech - Arusha Location"
-              src="https://www.google.com/maps?q=-3.371291966395252,36.69467616329542&z=15&output=embed"
+              title="Arusha Networking Group - Arusha Location"
+              src="https://www.google.com/maps?q=-3.373295917282486,36.68796271818208&z=15&output=embed"
               width="100%"
               height="100%"
               className="border-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
@@ -336,7 +336,7 @@ export default function ContactPage() {
           </motion.div>
 
           <p className="text-center text-sm text-gray-400 mt-6 italic">
-            📍 Arusha, Tanzania — Coordinates: -3.371291966395252, 36.69467616329542
+            📍 Arusha, Tanzania — Coordinates: -3.373295917282486, 36.68796271818208
           </p>
         </div>
       </section>

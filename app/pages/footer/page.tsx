@@ -12,7 +12,7 @@ export default function Footer() {
     { name: 'Instagram', icon: Instagram, href: '#' },
   ];
 
-  const brandName = "FORGETECH";
+  const brandName = "Arusha Networking Group";
 
   return (
     <footer className="relative bg-[#373e51] text-white pt-10 pb-8 border-t border-white/10 overflow-hidden">
@@ -36,12 +36,12 @@ export default function Footer() {
                   >
                     <Image
                       src="/f-icon.png"
-                      alt="ForgeTech Icon"
+                      alt="Arusha Networking Group Icon"
                       fill
                       className="object-contain"
                     />
                   </motion.div>
-                  <div className="flex overflow-hidden">
+                  <div className="flex overflow-hidden flex-wrap">
                     {brandName.split("").map((letter, idx) => (
                       <motion.span
                         key={idx}
@@ -49,10 +49,9 @@ export default function Footer() {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 + idx * 0.05, duration: 0.5, ease: "easeOut" }}
-                        className={letter === "T" || letter === "E" || letter === "C" || letter === "H" && idx > 4 ? "text-[#ff6219]" : "text-white"}
-                        style={{ color: idx >= 5 ? "#ff6219" : "white" }}
+                        style={{ color: idx >= 7 ? "#ff6219" : "white" }}
                       >
-                        {letter}
+                        {letter === " " ? "\u00A0" : letter}
                       </motion.span>
                     ))}
                   </div>
@@ -123,7 +122,7 @@ export default function Footer() {
               <div className="bg-white/[0.03] border border-white/10 rounded-[2rem] p-6 backdrop-blur-xl relative overflow-hidden group">
                 <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#ff6219]/10 rounded-full blur-2xl group-hover:bg-[#ff6219]/20 transition-colors duration-500" />
 
-                <h4 className="text-white text-lg font-bold mb-2">Join the Forge</h4>
+                <h4 className="text-white text-lg font-bold mb-2">Join ANG</h4>
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">Subscribe for the latest enterprise ICT insights and system updates.</p>
 
                 <div className="relative">
@@ -146,7 +145,7 @@ export default function Footer() {
           <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">
               <p className="text-sm text-gray-400 font-bold tracking-tight">
-                &copy; 2025 <span className="text-white">ForgeTech Tanzania</span>
+                &copy; 2025 <span className="text-white">Arusha Networking Group</span>
               </p>
               <span className="hidden md:block w-1 h-1 bg-white/20 rounded-full"></span>
               <p className="text-sm text-gray-500 font-medium italic">Building Digital Foundations</p>

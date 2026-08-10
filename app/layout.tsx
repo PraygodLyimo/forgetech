@@ -6,8 +6,8 @@ import Footer from "./pages/footer/page";
 // Removed Google font imports (Geist). Using system fonts to avoid build-time network fetch.
 
 export const metadata: Metadata = {
-  title: "ForgeTech",
-  description: "ForgeTech - Modern ICT Solutions for East Africa",
+  title: "Arusha Networking Group",
+  description: "Arusha Networking Group - Modern ICT Solutions for East Africa",
 };
 
 export default function RootLayout({

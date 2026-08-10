@@ -10,7 +10,7 @@ import { Shield, Target, Users, Zap, CheckCircle2, Award } from 'lucide-react';
 const outfit = Outfit({ subsets: ['latin'] });
 
 export default function AboutPage() {
-  const brandName = "FORGETECH";
+  const brandName = "Arusha Networking Group";
 
   return (
     <div className={`min-h-screen bg-white ${outfit.className} overflow-hidden`}>
@@ -22,30 +22,29 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn direction="up">
-              <span className="text-3xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight flex items-center justify-center gap-4 mb-8">
+              <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight flex items-center justify-center gap-2 sm:gap-4 mb-8 whitespace-nowrap overflow-x-auto no-scrollbar">
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative w-12 h-12 md:w-16 md:h-16"
+                  className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 shrink-0"
                 >
                   <Image
                     src="/f-icon.png"
-                    alt="ForgeTech Icon"
+                    alt="Arusha Networking Group Icon"
                     fill
                     className="object-contain"
                   />
                 </motion.div>
-                <div className="flex overflow-hidden py-2">
+                <div className="flex overflow-hidden py-2 whitespace-nowrap">
                   {brandName.split("").map((letter, idx) => (
                     <motion.span
                       key={idx}
                       initial={{ y: 50, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.1 + idx * 0.05, duration: 0.6, ease: "easeOut" }}
-                      className={letter === "T" || letter === "E" || letter === "C" || letter === "H" && idx > 4 ? "text-[#ff6219]" : "text-[#373e51]"}
-                      style={{ color: idx >= 5 ? "#ff6219" : "#373e51" }}
+                      style={{ color: idx >= 7 ? "#ff6219" : "#373e51" }}
                     >
-                      {letter}
+                      {letter === " " ? "\u00A0" : letter}
                     </motion.span>
                   ))}
                 </div>
@@ -121,11 +120,11 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <FadeIn direction="up">
               <div className="relative">
-                <span className="text-[10rem] font-bold text-[#ff6219]/5 absolute -top-24 -left-20 pointer-events-none select-none">FORGE</span>
+                <span className="text-[10rem] font-bold text-[#ff6219]/5 absolute -top-24 -left-20 pointer-events-none select-none">ANG</span>
                 <h2 className="text-4xl font-bold text-[#373e51] mb-8 relative">Who We Are</h2>
                 <div className="space-y-6 text-gray-600 text-lg leading-relaxed relative">
                   <p>
-                    ForgeTech is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions.
+                    Arusha Networking Group is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions.
                   </p>
                   <p>
                     We provide ranging from small business networks to enterprise-grade server infrastructure and integrated security systems. We prioritize uptime, security, and clear documentation to ensure your operations run seamlessly.
