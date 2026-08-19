@@ -45,7 +45,7 @@ export function EncryptedText({
     const elementRef = useRef<HTMLElement>(null);
 
     // Select the appropriate static motion component
-    let MotionComp: any = MotionDiv;
+    let MotionComp: React.ElementType = MotionDiv;
     switch (Component) {
         case "span": MotionComp = MotionSpan; break;
         case "p": MotionComp = MotionP; break;
@@ -115,7 +115,7 @@ export function EncryptedText({
 
     return (
         <MotionComp
-            ref={elementRef as any}
+            ref={elementRef as React.Ref<HTMLElement>}
             className={cn("inline-block", className)}
             {...props}
         >

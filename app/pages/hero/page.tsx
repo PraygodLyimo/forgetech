@@ -13,15 +13,17 @@ export default function HeroPage() {
 
     const handleSearch = (value = query) => {
         if (!value.trim()) return;
-        window.location.href = `/products?search=${encodeURIComponent(value.trim())}`;
+        window.location.href = `/services?search=${encodeURIComponent(value.trim())}`;
     };
 
     return (
         <div className="w-full overflow-hidden">
-            <section className="min-h-[90vh] flex items-center justify-center relative bg-linear-to-b from-white via-[#fffdfb] to-[#fff9f5] py-16">
-                <Globe className="opacity-60 pointer-events-auto scale-100 md:scale-[1.25]" />
+            <section className="min-h-[90vh] flex items-center justify-center relative bg-linear-to-b from-[#fff8f3] via-[#fffdfb] to-[#ff6219]/5 py-16 overflow-hidden">
+                <Globe className="opacity-70 pointer-events-auto scale-100 md:scale-[1.25]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#ff6219]/20 blur-[120px] rounded-full pointer-events-none" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#373e51]/20 blur-[120px] rounded-full pointer-events-none" />
                 
-                <div className="relative z-10 mx-auto px-4 py-12 space-y-8 text-center max-w-4xl">
+                <div className="relative z-10 mx-auto px-4 py-12 space-y-8 text-center max-w-4xl backdrop-blur-xs">
                     <FadeIn delay={0} direction="down">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
@@ -70,8 +72,8 @@ export default function HeroPage() {
                     <FadeIn delay={0.6} direction="up">
                         <div className="flex justify-center pt-4">
                             <motion.div 
-                                whileFocus={{ scale: 1.02 }}
-                                className="w-full max-w-2xl border border-orange-200/80 rounded-2xl overflow-hidden shadow-xl bg-white flex items-center p-1.5 focus-within:border-[#ff6219] transition-all"
+                                whileFocus={{ scale: 1.02, y: -2 }}
+                                className="w-full max-w-2xl border border-white/40 rounded-2xl overflow-hidden shadow-2xl bg-white/70 backdrop-blur-xl flex items-center p-1.5 focus-within:border-[#ff6219] transition-all"
                             >
                                 <Search className="w-5 h-5 text-gray-400 ml-4 shrink-0" />
                                 <input

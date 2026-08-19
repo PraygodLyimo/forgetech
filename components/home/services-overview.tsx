@@ -88,7 +88,7 @@ export function ServicesOverview() {
               className="bg-linear-to-br from-[#373e51] via-[#2d3343] to-[#1e222d] text-white rounded-[2.5rem] p-8 md:p-14 shadow-2xl relative overflow-hidden border border-white/10 group"
             >
               {/* Background Glow */}
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff6219]/15 rounded-full blur-[120px] pointer-events-none group-hover:bg-[#ff6219]/30 transition-all duration-700" />
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff6219]/20 rounded-full blur-[140px] pointer-events-none group-hover:bg-[#ff6219]/40 transition-all duration-700" />
               <ShieldCheck className="absolute -right-12 -bottom-12 w-80 h-80 text-white/5 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
 
               <div className="grid md:grid-cols-12 gap-8 items-center relative z-10">
@@ -181,7 +181,7 @@ export function ServicesOverview() {
               className="bg-linear-to-br from-orange-50/70 via-white to-orange-50/40 border border-orange-200/80 rounded-[2.5rem] p-8 md:p-14 shadow-xl relative overflow-hidden group"
             >
               {/* Background Glow */}
-              <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#ff6219]/5 rounded-full blur-[100px] pointer-events-none" />
+              <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#ff6219]/10 rounded-full blur-[120px] pointer-events-none group-hover:bg-[#ff6219]/25 transition-all duration-700" />
               <Network className="absolute -left-12 -bottom-12 w-80 h-80 text-[#ff6219]/5 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
 
               <div className="grid md:grid-cols-12 gap-8 items-center relative z-10">

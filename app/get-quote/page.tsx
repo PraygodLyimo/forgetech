@@ -18,7 +18,6 @@ function QuoteForm() {
     'Enterprise Network Solutions',
     'CCTV & Surveillance Systems',
     'Access Control Systems',
-    'Cloud Migration Services',
     'Server Room Design & Setup',
     'UPS & Backup Power Systems',
     'IP Telephony Systems',
@@ -40,13 +39,6 @@ function QuoteForm() {
   };
 
   const [selectedItem, setSelectedItem] = useState(initialItem || getDefaultItem(selectedType));
-
-  // Update selectedItem when type changes if it's empty
-  useEffect(() => {
-    if (!selectedItem) {
-      setSelectedItem(getDefaultItem(selectedType));
-    }
-  }, [selectedType, selectedItem]);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -91,7 +83,15 @@ function QuoteForm() {
         <div className="bg-white rounded-2xl shadow p-6">
           <div className="mb-4">
             <label className="block text-sm font-semibold text-[#373e51] mb-2">Type</label>
-            <select value={selectedType} onChange={(e) => { setSelectedType(e.target.value); setSelectedItem(''); }} className="w-full px-4 py-3 border border-orange-200 rounded-lg">
+            <select 
+              value={selectedType} 
+              onChange={(e) => { 
+                const newType = e.target.value;
+                setSelectedType(newType); 
+                setSelectedItem(getDefaultItem(newType)); 
+              }} 
+              className="w-full px-4 py-3 border border-orange-200 rounded-lg"
+            >
               <option value="product">Product</option>
               <option value="service">Service</option>
             </select>

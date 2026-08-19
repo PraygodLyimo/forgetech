@@ -65,7 +65,7 @@ export function HyperText({
   const elementRef = useRef<HTMLElement>(null)
 
   // Select the appropriate static motion component
-  let MotionComp: any = MotionDiv;
+  let MotionComp: React.ElementType = MotionDiv;
   switch (Component) {
       case "span": MotionComp = MotionSpan; break;
       case "p": MotionComp = MotionP; break;
@@ -148,7 +148,7 @@ export function HyperText({
 
   return (
     <MotionComp
-      ref={elementRef as any}
+      ref={elementRef as React.Ref<HTMLElement>}
       className={cn("overflow-hidden py-2 font-bold", textClass, className)}
       onMouseEnter={handleAnimationTrigger}
       {...props}
