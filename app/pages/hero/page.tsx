@@ -36,13 +36,13 @@ export default function HeroPage() {
 
                     <FadeIn delay={0.2} direction="up">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#373e51] leading-tight mx-auto tracking-tight">
-                            <HyperText>Fast Wi-Fi Networks & Smart Security Systems</HyperText>
+                            <HyperText>Network Infrastructure & Security Systems</HyperText>
                         </h1>
                     </FadeIn>
 
                     <FadeIn delay={0.4} direction="up">
                         <p className="text-gray-600 text-lg md:text-xl leading-relaxed mx-auto max-w-3xl font-light">
-                            Arusha Networking Group installs clear HD security cameras, fingerprint door locks, motion alarms, fiber internet cables, and high-speed Wi-Fi across Arusha and East Africa.
+                            Arusha Networking Group installs and manages network infrastructure (UTP cabling, fiber optics, Wi-Fi) and complete security systems (CCTV, electric fences, access control, gate motors, and alarms) across Arusha and East Africa.
                         </p>
                     </FadeIn>
 
@@ -58,12 +58,14 @@ export default function HeroPage() {
                                 </Link>
                             </motion.div>
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                                <Link 
-                                    href="/contact" 
+                                <a 
+                                    href="https://wa.me/255758100137"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-[#373e51] hover:bg-black text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all"
                                 >
-                                    Book Free Site Survey
-                                </Link>
+                                    Contact Us
+                                </a>
                             </motion.div>
                         </div>
                     </FadeIn>

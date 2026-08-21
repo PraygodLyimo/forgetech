@@ -15,24 +15,24 @@ const services = [
     body: "AI 4K IP cameras, 24/7 NVR recording, and mobile remote monitoring for physical security.",
   },
   {
-    name: "Biometric Access",
+    name: "Electric Fences",
+    body: "Perimeter electric fencing, energizers, breach alarm integration, and indoor/outdoor control.",
+  },
+  {
+    name: "Access Control & Biometrics",
     body: "Fingerprint, facial recognition, smart locks, time attendance, and automated turnstiles.",
   },
   {
-    name: "Intrusion Alarms",
-    body: "Motion sensors, glass break detectors, emergency sirens, and automated SMS alerts.",
+    name: "Gate Motors & Automation",
+    body: "Automatic sliding and swing gate motors, boom barriers, and remote keypad entry.",
   },
   {
-    name: "Firewall & Cyber Defense",
-    body: "Next-generation firewalls, encrypted VPN tunnels, and proactive threat management.",
+    name: "UTP & Fiber Cabling",
+    body: "High-density UTP CAT6/CAT6A copper cabling, fusion fiber splicing, and clean rack management.",
   },
   {
-    name: "Structured Cabling & Fiber",
-    body: "High-density CAT6/CAT6A copper cabling, fusion fiber splicing, and clean rack management.",
-  },
-  {
-    name: "Wi-Fi 6 & PtP Bridges",
-    body: "Enterprise Wi-Fi 6 coverage with captive guest portals and long-distance Point-to-Point wireless.",
+    name: "Wi-Fi & Wireless PtP",
+    body: "Enterprise Wi-Fi coverage with captive portals and long-distance Point-to-Point wireless links.",
   },
 ];
 
@@ -87,8 +87,8 @@ const features = [
     Icon: Share2Icon,
     name: "Integrated Solutions",
     description: "Complete ICT ecosystem for your organization.",
-    href: "/get-quote",
-    cta: "Get Quote",
+    href: "https://wa.me/255758100137",
+    cta: "Contact Us",
     className: "col-span-3 lg:col-span-2",
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />

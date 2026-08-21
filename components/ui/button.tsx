@@ -44,19 +44,30 @@ function Button({
   size,
   asChild = false,
   ...props
-}: React.ComponentProps<typeof motion.button> &
+}: React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
   }) {
-  const Comp = asChild ? Slot : motion.button
+  if (asChild) {
+    return (
+      <Slot
+        data-slot="button"
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      />
+    )
+  }
+
+  // Extract motion-incompatible handlers if present
+  const { onDrag, ...motionProps } = props as any
 
   return (
-    <Comp
+    <motion.button
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      {...props}
+      {...motionProps}
     />
   )
 }

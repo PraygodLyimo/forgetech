@@ -73,14 +73,16 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo and Brand */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="">
-            <Image
-              src="/forgetech.webp"
-              alt="Logo"
-              width={200}
-              height={100}
-              className="object-contain group-hover:scale-105 transition-transform duration-300"
-            />
+          <div className="w-10 h-10 rounded-xl bg-orange-100 text-[#ff6219] flex items-center justify-center font-black text-base border border-orange-200 shadow-sm group-hover:bg-[#ff6219] group-hover:text-white transition-all">
+            ANG
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xl font-extrabold text-[#373e51] tracking-tight group-hover:text-[#ff6219] transition-colors leading-none">
+              Arusha Networking Group
+            </span>
+            <span className="text-[10px] font-bold text-[#ff6219] uppercase tracking-widest mt-1">
+              IT & Security Infrastructure
+            </span>
           </div>
         </Link>
 
@@ -99,12 +101,14 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
           </nav>
 
           {/* CTA Button */}
-          <Link
-            href="/get-quote"
+          <a
+            href="https://wa.me/255758100137"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:block bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-2 px-4 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-all duration-200"
           >
-            Get Quote
-          </Link>
+            Contact Us
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -150,15 +154,15 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
                 ))}
 
                 <div className="pt-4 mt-4 border-t border-gray-100">
-                  <button
-                    onClick={() => {
-                      handleContactClick();
-                      setMobileMenuOpen(false);
-                    }}
-                    className="w-full bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
+                  <a
+                    href="https://wa.me/255758100137"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-center w-full bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
                   >
-                    Get Quote
-                  </button>
+                    Contact Us
+                  </a>
                 </div>
               </div>
             </nav>

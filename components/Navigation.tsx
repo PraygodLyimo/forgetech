@@ -115,12 +115,14 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
             ))}
           </nav>
 
-          <Button
-            onClick={handleContactClick}
+          <a
+            href="https://wa.me/255758100137"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:block bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-200"
           >
-            Get Quote
-          </Button>
+            Contact Us
+          </a>
 
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -169,15 +171,15 @@ export default function Navigation({ className = '', onContactClick }: Navigatio
                 ))}
 
                 <div className="pt-4 mt-4 border-t border-orange-200">
-                  <Button
-                    onClick={() => {
-                      handleContactClick();
-                      setMobileMenuOpen(false);
-                    }}
-                    className="w-full bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-200"
+                  <a
+                    href="https://wa.me/255758100137"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-center w-full bg-linear-to-br from-[#ff6219] to-[#ff7a3d] text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-200"
                   >
-                    Get Quote
-                  </Button>
+                    Contact Us
+                  </a>
                 </div>
               </div>
             </nav>

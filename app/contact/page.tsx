@@ -246,12 +246,14 @@ export default function ContactPage() {
                           className="w-full px-5 py-4 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ff6219] focus:border-transparent transition-all duration-300 bg-white cursor-pointer"
                         >
                           <option value="">Select a service</option>
-                          <option value="software">Custom Software</option>
-                          <option value="cloud">Cloud-Native Systems</option>
-                          <option value="security">Cyber Security</option>
-                          <option value="ai">AI & Data Solutions</option>
-                          <option value="networking">Modern Networking</option>
-                          <option value="iot">IoT & Smart Systems</option>
+                          <option value="cctv">CCTV & Surveillance Cameras</option>
+                          <option value="electric-fence">Electric Fence Systems</option>
+                          <option value="access-control">Access Control & Biometrics</option>
+                          <option value="gate-motors">Gate Motors & Automation</option>
+                          <option value="utp-cabling">UTP & Structured Cabling</option>
+                          <option value="fiber-cabling">Fiber Optic Cabling</option>
+                          <option value="wifi-wireless">Enterprise Wi-Fi & Wireless</option>
+                          <option value="network-support">Managed Network Support</option>
                           <option value="other">Other</option>
                         </select>
                       </div>

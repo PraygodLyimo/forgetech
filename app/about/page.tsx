@@ -124,10 +124,10 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold text-[#373e51] mb-8 relative">Who We Are</h2>
                 <div className="space-y-6 text-gray-600 text-lg leading-relaxed relative">
                   <p>
-                    Arusha Networking Group is a premier Information and Communication Technology (ICT) company headquartered in Arusha, Tanzania. Our team of highly skilled and certified engineers and technicians is dedicated to delivering reliable, scalable, and sustainable technology solutions.
+                    Arusha Networking Group is a premier IT and Security Infrastructure company headquartered in Arusha, Tanzania. Our team of highly skilled engineers and technicians is dedicated to designing, installing, and managing complete network cabling (UTP & fiber), enterprise Wi-Fi, and security systems (CCTV, electric fences, access control, and gate motors).
                   </p>
                   <p>
-                    We provide ranging from small business networks to enterprise-grade server infrastructure and integrated security systems. We prioritize uptime, security, and clear documentation to ensure your operations run seamlessly.
+                    We specialize in infrastructure engineering and management — helping organizations build reliable, secure, and scalable digital and physical security foundations across Tanzania and East Africa.
                   </p>
                 </div>
               </div>

@@ -40,15 +40,15 @@ export function ServicesOverview() {
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider bg-orange-100/80 text-[#ff6219] border border-orange-200 mb-6 shadow-sm cursor-pointer"
             >
               <Sparkles className="w-4 h-4 text-[#ff6219] animate-spin" style={{ animationDuration: '4s' }} />
-              Free On-Site Survey & Quick Quote
+              Professional IT & Security Infrastructure
             </motion.span>
 
             <h2 className="text-4xl md:text-6xl font-bold text-[#373e51] mb-6 leading-tight tracking-tight">
-              Protect Your Office & Get <br />
-              <span className="text-[#ff6219]">Super-Fast Wi-Fi & Security</span>
+              Complete Network Infrastructure & <br />
+              <span className="text-[#ff6219]">Security Systems Engineering</span>
             </h2>
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-light">
-              We install security cameras, fingerprint door locks, alarms, fiber cables, and Wi-Fi networks in Arusha with quick local service and 1-year warranty.
+              We design, install, and manage network infrastructure (UTP cabling, fiber optics, Wi-Fi, switches & routers) and security systems (CCTV, electric fences, access control & gate motors) across Arusha and East Africa.
             </p>
           </FadeIn>
         </div>
@@ -59,7 +59,7 @@ export function ServicesOverview() {
             { title: 'Free Site Visit', desc: 'Free inspection in Arusha', icon: FileCheck2 },
             { title: 'Same-Day Support', desc: 'Fast local engineers', icon: Clock },
             { title: '1-Year Warranty', desc: 'Guaranteed equipment', icon: Award },
-            { title: 'Full Installation', desc: 'From wiring to mobile app', icon: Zap },
+            { title: 'Full Installation', desc: 'From cabling to configuration', icon: Zap },
           ].map((item, idx) => (
             <FadeIn key={idx} delay={idx * 0.08} direction="up">
               <motion.div 
@@ -95,28 +95,28 @@ export function ServicesOverview() {
                 <div className="md:col-span-8 space-y-6">
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="bg-[#ff6219] text-white font-bold text-xs px-3.5 py-1.5 rounded-full tracking-wider uppercase shadow-lg shadow-orange-500/30">
-                      Security Spotlight
+                      Security Infrastructure
                     </span>
                     <span className="bg-white/10 text-gray-300 text-xs px-3.5 py-1.5 rounded-full font-medium border border-white/15">
-                      Cameras & Door Locks
+                      Cameras, Fences, Access & Gate Motors
                     </span>
                   </div>
 
                   <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-                    Smart HD Cameras & <br />
-                    <span className="text-[#ff6219]">Fingerprint Door Locks</span>
+                    CCTV, Electric Fences, <br />
+                    <span className="text-[#ff6219]">Access Control & Gate Motors</span>
                   </h3>
 
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
-                    Keep your business safe with clear HD cameras, fingerprint door locks, and loud alarm sirens. Watch live video anytime on your mobile phone from anywhere.
+                    Keep your facility completely secure with HD CCTV surveillance, perimeter electric fencing, biometric access control systems, automated gate motors, and motion alarms.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                     {[
-                      'Clear Night-Vision HD Cameras',
-                      'Fingerprint & Face Door Locks',
-                      'Loud Motion Sensor Alarms',
-                      'Instant Phone & SMS Alerts'
+                      'HD & 4K CCTV Camera Systems',
+                      'Electric Fencing & Gate Motors',
+                      'Biometric & Card Access Control',
+                      'Loud Motion Alarms & Sirens'
                     ].map((feature, fIdx) => (
                       <div key={fIdx} className="flex items-center gap-2.5 text-sm text-gray-200">
                         <CheckCircle2 className="w-4 h-4 text-[#ff6219] shrink-0" />
@@ -127,13 +127,15 @@ export function ServicesOverview() {
 
                   <div className="pt-4 flex flex-wrap items-center gap-4">
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                      <Link
-                        href="/get-quote?item=Smart+Security+System+Survey&type=service"
+                      <a
+                        href="https://wa.me/255758100137"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-[#ff6219] hover:bg-[#e55a17] text-white font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                       >
-                        Book Free On-Site Visit
+                        Contact Us
                         <ArrowRight className="w-5 h-5" />
-                      </Link>
+                      </a>
                     </motion.div>
                     <Link
                       href="/services"
@@ -153,16 +155,16 @@ export function ServicesOverview() {
                     <div className="w-16 h-16 bg-[#ff6219]/20 text-[#ff6219] rounded-2xl flex items-center justify-center mx-auto shadow-md">
                       <ShieldCheck className="w-8 h-8" />
                     </div>
-                    <h4 className="text-xl font-bold text-white">Full Security Control</h4>
-                    <p className="text-xs text-gray-400">Watch live footage and control doors directly from your phone.</p>
+                    <h4 className="text-xl font-bold text-white">Complete Physical Security</h4>
+                    <p className="text-xs text-gray-400">Integrated CCTV, gate automation, electric fencing & access control.</p>
                     <div className="pt-2 border-t border-white/10 flex justify-around text-center text-xs">
                       <div>
                         <div className="font-bold text-lg text-[#ff6219]">100%</div>
-                        <div className="text-gray-400">Clear Video</div>
+                        <div className="text-gray-400">Coverage</div>
                       </div>
                       <div>
                         <div className="font-bold text-lg text-[#ff6219]">24/7</div>
-                        <div className="text-gray-400">Recording</div>
+                        <div className="text-gray-400">Protection</div>
                       </div>
                     </div>
                   </motion.div>
@@ -188,28 +190,28 @@ export function ServicesOverview() {
                 <div className="md:col-span-8 space-y-6">
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="bg-[#373e51] text-white font-bold text-xs px-3.5 py-1.5 rounded-full tracking-wider uppercase shadow-md">
-                      Networking Spotlight
+                      Network Infrastructure
                     </span>
                     <span className="bg-orange-100 text-[#ff6219] text-xs px-3.5 py-1.5 rounded-full font-bold">
-                      Super-Fast Internet Wiring
+                      UTP, Fiber & Wireless Infrastructure
                     </span>
                   </div>
 
                   <h3 className="text-3xl md:text-5xl font-bold text-[#373e51] tracking-tight leading-tight">
-                    Fast Fiber Cabling & <br />
-                    <span className="text-[#ff6219]">High-Speed Wi-Fi Networks</span>
+                    UTP Cabling, Fiber & <br />
+                    <span className="text-[#ff6219]">Wireless Network Infrastructure</span>
                   </h3>
 
                   <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl font-light">
-                    Stop slow internet and buffer lag. We lay clean fiber and network cables, setup strong Wi-Fi routers, and connect buildings wirelessly with zero dead spots.
+                    We install and manage reliable network infrastructure — laying UTP structured cabling, fiber optics, enterprise Wi-Fi access points, switches, and routers for seamless communication.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                     {[
-                      'Clean & Neat Network Cable Wiring',
-                      'High-Speed Routers & Switches',
-                      'Fast Wi-Fi Coverage with No Dead Zones',
-                      'Long-Distance Building Wireless Links'
+                      'UTP & CAT6/CAT6A Structured Cabling',
+                      'Fiber Optic Splicing & Termination',
+                      'Enterprise Wi-Fi & Wireless PtP Bridges',
+                      'Router, Switch & Network Management'
                     ].map((feature, fIdx) => (
                       <div key={fIdx} className="flex items-center gap-2.5 text-sm text-gray-700">
                         <CheckCircle2 className="w-4 h-4 text-[#ff6219] shrink-0" />
@@ -220,13 +222,15 @@ export function ServicesOverview() {
 
                   <div className="pt-4 flex flex-wrap items-center gap-4">
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                      <Link
-                        href="/get-quote?item=Enterprise+Network+Design&type=service"
+                      <a
+                        href="https://wa.me/255758100137"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-[#373e51] hover:bg-[#ff6219] text-white font-bold py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                       >
-                        Request Free Network Inspection
+                        Contact Us
                         <ArrowRight className="w-5 h-5" />
-                      </Link>
+                      </a>
                     </motion.div>
                     <Link
                       href="/contact"
@@ -246,8 +250,8 @@ export function ServicesOverview() {
                     <div className="w-16 h-16 bg-[#373e51]/10 text-[#373e51] rounded-2xl flex items-center justify-center mx-auto shadow-sm">
                       <Network className="w-8 h-8" />
                     </div>
-                    <h4 className="text-xl font-bold text-[#373e51]">Fast & Reliable</h4>
-                    <p className="text-xs text-gray-500">Smooth connection for computers, phones, and smart TV devices.</p>
+                    <h4 className="text-xl font-bold text-[#373e51]">Managed Infrastructure</h4>
+                    <p className="text-xs text-gray-500">Robust UTP, fiber, and wireless network setup & maintenance.</p>
                     <div className="pt-2 border-t border-gray-100 flex justify-around text-center text-xs">
                       <div>
                         <div className="font-bold text-lg text-[#373e51]">100%</div>
@@ -255,7 +259,7 @@ export function ServicesOverview() {
                       </div>
                       <div>
                         <div className="font-bold text-lg text-[#373e51]">High Speed</div>
-                        <div className="text-gray-500">Fiber</div>
+                        <div className="text-gray-500">LAN & Wi-Fi</div>
                       </div>
                     </div>
                   </motion.div>
@@ -273,16 +277,18 @@ export function ServicesOverview() {
               className="bg-linear-to-r from-[#ff6219] to-[#ff7a3d] rounded-3xl p-8 md:p-10 text-white shadow-2xl max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6"
             >
               <div className="text-left max-w-xl">
-                <h4 className="text-2xl md:text-3xl font-bold mb-2">Ready to Upgrade Your Network or Cameras?</h4>
-                <p className="text-white/90 text-sm md:text-base">Get a free design and exact price quote within 24 hours.</p>
+                <h4 className="text-2xl md:text-3xl font-bold mb-2">Ready to Upgrade Your Network or Security System?</h4>
+                <p className="text-white/90 text-sm md:text-base">Get a free site survey and custom infrastructure plan within 24 hours.</p>
               </div>
-              <Link
-                href="/contact"
+              <a
+                href="https://wa.me/255758100137"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#373e51] hover:bg-black text-white font-bold py-4 px-8 rounded-full shadow-xl hover:scale-105 transition-all shrink-0 flex items-center gap-2"
               >
-                Contact Arusha Team
+                Contact Us
                 <ArrowRight className="w-5 h-5 text-[#ff6219]" />
-              </Link>
+              </a>
             </motion.div>
           </FadeIn>
         </div>

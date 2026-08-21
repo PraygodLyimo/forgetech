@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 export default function Footer() {
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/arushanetworksltd' },
+    { name: 'Twitter', icon: Twitter, href: 'https://x.com/arushanetworksltd' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/arushanetworksltd' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/arushanetworksltd' },
   ];
 
   const brandName = "Arusha Networking Group";
@@ -25,21 +25,16 @@ export default function Footer() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-8">
           {/* Brand Section */}
-          <div className="md:col-span-4 space-y-6">
+          <div className="md:col-span-5 space-y-6">
             <FadeIn delay={0} direction="up">
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
                   <motion.div
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative w-10 h-10"
+                    className="w-10 h-10 rounded-xl bg-[#ff6219] text-white flex items-center justify-center font-black text-sm shadow-md shrink-0"
                   >
-                    <Image
-                      src="/f-icon.png"
-                      alt="Arusha Networking Group Icon"
-                      fill
-                      className="object-contain"
-                    />
+                    ANG
                   </motion.div>
                   <div className="flex overflow-hidden flex-wrap">
                     {brandName.split("").map((letter, idx) => (
@@ -57,17 +52,19 @@ export default function Footer() {
                   </div>
                 </span>
                 <span className="text-xs text-[#ff6219] uppercase tracking-[0.3em] mt-2 font-black">
-                  ICT Excellence & Engineering
+                  IT & Security Infrastructure
                 </span>
               </div>
-              <p className="text-gray-300 text-base leading-relaxed max-w-sm">
-                Deploying enterprise-grade technology infrastructure across East Africa with world-class precision and local support.
+              <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
+                Installing and managing reliable network cabling (UTP & fiber), Wi-Fi, and security systems (CCTV, electric fences, access control & gate motors) in Arusha & East Africa.
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#ff6219] hover:border-[#ff6219] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group shadow-xl"
                     aria-label={social.name}
                   >
@@ -78,18 +75,23 @@ export default function Footer() {
             </FadeIn>
           </div>
 
-          {/* Company Links */}
-          <div className="md:col-span-2">
+          {/* Quick Links */}
+          <div className="md:col-span-3">
             <FadeIn delay={0.2} direction="up">
               <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
                 <span className="w-1.5 h-1.5 bg-[#ff6219] rounded-full"></span>
-                Links
+                Quick Links
               </h4>
-              <ul className="space-y-4">
-                {['About Us', 'Services', 'Products', 'Contact'].map((item) => (
-                  <li key={item}>
-                    <a href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-sm text-gray-400 hover:text-white transition-all duration-300 block font-semibold hover:translate-x-1">
-                      {item}
+              <ul className="space-y-3.5">
+                {[
+                  { name: 'Home', href: '/' },
+                  { name: 'About', href: '/about' },
+                  { name: 'Services', href: '/services' },
+                  { name: 'Contact', href: '/contact' },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-sm text-gray-300 hover:text-[#ff6219] transition-all duration-300 block font-semibold hover:translate-x-1">
+                      {item.name}
                     </a>
                   </li>
                 ))}
@@ -97,45 +99,31 @@ export default function Footer() {
             </FadeIn>
           </div>
 
-          {/* Legal/Support */}
-          <div className="md:col-span-2">
+          {/* Resources & Downloads */}
+          <div className="md:col-span-4">
             <FadeIn delay={0.3} direction="up">
               <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
                 <span className="w-1.5 h-1.5 bg-[#ff6219] rounded-full"></span>
-                Support
+                Resources & Downloads
               </h4>
-              <ul className="space-y-4">
-                {['Portal', 'Terms', 'Privacy', 'Careers'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-sm text-gray-400 hover:text-white transition-all duration-300 block font-semibold hover:translate-x-1">
-                      {item}
+              <ul className="space-y-3.5">
+                {[
+                  { name: 'Client Portal', href: '/portal', isDownload: false },
+                  { name: 'Terms & Conditions', href: '/terms', isDownload: false },
+                  { name: '📄 Business Profile (PDF)', href: '/Arusha_Networks_Ltd_Company_Profile.pdf', isDownload: true },
+                  { name: '📇 Sales Business Card', href: '/business-card', isDownload: false },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      download={item.isDownload ? true : undefined}
+                      className="text-sm text-gray-300 hover:text-[#ff6219] transition-all duration-300 block font-semibold hover:translate-x-1"
+                    >
+                      {item.name}
                     </a>
                   </li>
                 ))}
               </ul>
-            </FadeIn>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="md:col-span-4">
-            <FadeIn delay={0.4} direction="up">
-              <div className="bg-white/[0.03] border border-white/10 rounded-[2rem] p-6 backdrop-blur-xl relative overflow-hidden group">
-                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#ff6219]/10 rounded-full blur-2xl group-hover:bg-[#ff6219]/20 transition-colors duration-500" />
-
-                <h4 className="text-white text-lg font-bold mb-2">Join ANG</h4>
-                <p className="text-gray-400 text-sm mb-6 leading-relaxed">Subscribe for the latest enterprise ICT insights and system updates.</p>
-
-                <div className="relative">
-                  <input
-                    type="email"
-                    placeholder="Engineering Email"
-                    className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6219] focus:ring-1 focus:ring-[#ff6219]/30 transition-all font-medium"
-                  />
-                  <button className="absolute right-2 top-2 bottom-2 px-4 bg-[#ff6219] rounded-xl hover:bg-[#e55a17] transition-all shadow-lg hover:shadow-[#ff6219]/30 flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </button>
-                </div>
-              </div>
             </FadeIn>
           </div>
         </div>
